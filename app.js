@@ -44,11 +44,11 @@ var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // POST /login gets urlencoded bodies
-app.post('/hello', urlencodedParser, function (req, res) {
-  res.send('welcome, ' + req.body.ts)
-})
+//app.post('/hello', urlencodedParser, function (req, res) {
+ // res.send('welcome, ' + req.body.ts)
+//})
 
 // POST /api/users gets JSON bodies
-//app.post('/api/users', jsonParser, function (req, res) {
-  // create user in req.body
+app.post('/hello', jsonParser, function (req, res) {
+  res.send('welcome, ' + req.body.ts)
 //})
