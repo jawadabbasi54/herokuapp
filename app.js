@@ -1,4 +1,4 @@
-var express = require('express');
+/*var express = require('express');
 var bodyParser = require('body-parser');
  
 var app = express();
@@ -18,6 +18,7 @@ app.listen(port, function () {
 app.post('/hello', function (req, res, next) {
 
   var userName = req.body.user_name;
+
   var botPayload = {
     text : 'Hello ' + userName + ', Welcome to Abode ! I\'ll be your guide.'
   };
@@ -28,10 +29,26 @@ app.post('/hello', function (req, res, next) {
     return res.status(200).end();
   }
 
-  app.use(function (req, res) {
-  res.setHeader('Content-Type', 'text/plain')
-  res.write('you posted:\n')
-  res.end(JSON.stringify(req.body, null, 2))
-})
-  
+
   });
+*/
+var express = require('express')
+var bodyParser = require('body-parser')
+
+var app = express()
+
+// create application/json parser
+var jsonParser = bodyParser.json()
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+// POST /login gets urlencoded bodies
+app.post('/hello', urlencodedParser, function (req, res) {
+  res.send('welcome, ' + req.body.username)
+})
+
+// POST /api/users gets JSON bodies
+//app.post('/api/users', jsonParser, function (req, res) {
+  // create user in req.body
+//})
