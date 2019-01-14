@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Simple testing Node server",
   "main": "app.js",
+  "scripts": {
+    "start" : "node app.js"
+   },
   "author": "Jawad Abbasi",
   "license": "MIT",
   "dependencies": {
