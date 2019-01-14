@@ -1,4 +1,4 @@
-/*var express = require('express');
+var express = require('express');
 var bodyParser = require('body-parser');
  
 var app = express();
@@ -31,24 +31,3 @@ app.post('/hello', function (req, res, next) {
 
 
   });
-*/
-var express = require('express')
-var bodyParser = require('body-parser')
-
-var app = express()
-
-// create application/json parser
-var jsonParser = bodyParser.json()
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-// POST /login gets urlencoded bodies
-//app.post('/hello', urlencodedParser, function (req, res) {
- // res.send('welcome, ' + req.body.ts)
-//})
-
-// POST /api/users gets JSON bodies
-app.post('/hello', jsonParser, function (req, res) {
-  res.send('welcome, ' + req.body.user_name)
-//})
