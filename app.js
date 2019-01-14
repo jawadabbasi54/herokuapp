@@ -6,7 +6,7 @@ var port = process.env.PORT || 1337;
  
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
- 
+ app.use(bodyParser.json());
 // test route
 app.get('/', function (req, res) { res.status(200).send('Hello world!'); });
  
@@ -16,6 +16,7 @@ app.listen(port, function () {
 
 	
 app.post('/hello', function (req, res, next) {
+
   var userName = req.body.user_name;
   var botPayload = {
     text : 'Hello ' + userName + ', Welcome to Abode ! I\'ll be your guide.'
@@ -26,4 +27,11 @@ app.post('/hello', function (req, res, next) {
   } else {
     return res.status(200).end();
   }
+
+  app.use(function (req, res) {
+  res.setHeader('Content-Type', 'text/plain')
+  res.write('you posted:\n')
+  res.end(JSON.stringify(req.body, null, 2))
+})
+  
   });
