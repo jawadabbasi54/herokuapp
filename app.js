@@ -8,7 +8,7 @@ var port = process.env.PORT || 1337;
 app.use(bodyParser.urlencoded({ extended: true }));
  app.use(bodyParser.json());
 // test route
-app.get('/message', function (req, res) {
+app.post('/message', function (req, res) {
 console.log("body:",req.body);
  res.status(200).send(req.body);
   });
