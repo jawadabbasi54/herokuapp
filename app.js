@@ -16,7 +16,7 @@ app.listen(port, function () {
 
 	
 app.post('/hello', function (req, res, next) {
-  var userName = req.body.user_name;
+  var userName = req.body.user_name.text;
   var botPayload = {
     text : 'Hello ' + userName + ', Welcome to Abode ! I\'ll be your guide.'
   };
