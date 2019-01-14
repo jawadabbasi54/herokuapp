@@ -16,7 +16,7 @@ app.listen(port, function () {
 
 	
 app.post('/hello', function (req, res, next) {
-  var userName = req.body.user_name.ts;
+  var userName = req.body.user_name;
   var botPayload = {
     text : 'Hello ' + userName + ', Welcome to Abode ! I\'ll be your guide.'
    // thread_ts: 1547461646.163600;
