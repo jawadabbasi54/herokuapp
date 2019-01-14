@@ -50,5 +50,5 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // POST /api/users gets JSON bodies
 app.post('/hello', jsonParser, function (req, res) {
-  res.send('welcome, ' + req.body.ts)
+  res.send('welcome, ' + req.body.user_name)
 //})
