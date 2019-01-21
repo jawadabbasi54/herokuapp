@@ -12,9 +12,7 @@ app.get('/', function (req, res) {
  res.status(200).send('Hello world!');
   });
  
-app.post('/jenkins', function (req, res) {
- res.redirect('http://localhost:8080/job/slack/build?token=4321');
-  });
+
 
 app.listen(port, function () {
   console.log('Listening on port ' + port);
