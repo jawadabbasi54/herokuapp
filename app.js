@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
  app.use(bodyParser.json());
 // test route
 app.get('/', function (req, res) {
-  res.status(200).send('Hello world!');
+ //res.status(200).send('Hello world!');
+res.redirect('https://github.com/jawadabbasi54/slack/blob/master/jenkins.png');
   });
  
 app.listen(port, function () {
