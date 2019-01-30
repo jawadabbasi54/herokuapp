@@ -9,8 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
  app.use(bodyParser.json());
 // test route
 app.get('/', function (req, res) {
- //res.status(200).send('Hello world!');
-   require('./bot');
+ res.status(200).send('Hello world!');
   });
  
 
