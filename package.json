@@ -4,13 +4,16 @@
   "description": "Simple testing Node server",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js"
-   },
+    "start": "node app.js"
+  },
   "author": "Jawad Abbasi",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.x.x",
+    "axios": "^0.18.0",
     "body-parser": "^1.x.x",
-    "request": "2.56.x"
+    "express": "^4.x.x",
+    "promise": "^8.0.2",
+    "request": "2.56.x",
+    "slackbots": "^1.2.0"
   }
 }
